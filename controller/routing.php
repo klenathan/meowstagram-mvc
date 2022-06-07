@@ -2,7 +2,7 @@
     class Route {
 
         protected $controller = "404";
-        protected $method = "view";
+        protected $method;
         protected $param;
 
 
@@ -13,6 +13,7 @@
             if(file_exists("controller/" . $url_array[1] . ".php")){
                 include_once("controller/" . $url_array[1] . ".php");
                 $this->controller = $url_array[1];
+                // $this->controller = new $this->controller
             } else {
                 include_once("view/404.php");
             }
@@ -27,8 +28,12 @@
 
             $this->param = $url_array?array_values($url_array) : [];
 
+            if (isset($this->controller) && isset($this->method)) {
+                call_user_func_array([new $this->controller, $this->method], $this->param);
+            } else {
+                new $this->controller;
+            }
             
-            call_user_func_array([new $this->controller, $this->method], $this->param);
             
 
             // echo $this->controller."/".$this->method;
