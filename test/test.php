@@ -5,4 +5,12 @@
     include_once("testController.php");
     $test = new testController();
 
+    class Test {
+        public function __construct($uri, $target, $method = "") {
+            if(isset($_SERVER["REQUEST_URI"])) {
+                
+            }
+        }
+    }
+
 ?>

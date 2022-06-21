@@ -2,7 +2,7 @@
 class Header extends Controller {
     
     function __construct () {
-        echo "Header";
+        include_once("view/header.php");
     }
 }
 ?>
