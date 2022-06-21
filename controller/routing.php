@@ -1,7 +1,7 @@
 <?php
     class Route {
 
-        protected $controller = "404";
+        protected $controller = "home";
         protected $method;
         protected $param;
 
@@ -14,8 +14,9 @@
                 include_once("controller/" . $url_array[1] . ".php");
                 $this->controller = $url_array[1];
                 // $this->controller = new $this->controller
+                
             } else {
-                include_once("view/404.php");
+                echo "error";
             }
             unset($url_array[1]);
 
@@ -31,7 +32,9 @@
             if (isset($this->controller) && isset($this->method)) {
                 call_user_func_array([new $this->controller, $this->method], $this->param);
             } else {
-                new $this->controller;
+                // echo "controller/".$this->controller.".php";
+                include_once("controller/".$this->controller.".php");
+                $target = new $this->controller;
             }
             
             
