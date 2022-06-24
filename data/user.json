@@ -1,18 +1,1 @@
-{
-  "one": {
-    "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
-    "age": 15
-  },
-  "qweqwe": {
-    "email": "two@ma.ca",
-    "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3"
-  },
-  "asd": {
-    "password": "f4bf9f7fcbedaba0392f108c59d8f4a38b3838efb64877380171b54475c2ade8",
-    "email": "two@ca.ca"
-  },
-  "asda": {
-    "password": "df86714fc534e90b5ffa0726164516b16f207e7fb20a3b823be218c26c789f03",
-    "email": "two@ca.ca"
-  }
-}
+{"one":{"password":"a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3","age":15},"qweqwe":{"email":"two@ma.ca","password":"a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3"},"asd":{"password":"f4bf9f7fcbedaba0392f108c59d8f4a38b3838efb64877380171b54475c2ade8","email":"two@ca.ca"},"asda":{"password":"df86714fc534e90b5ffa0726164516b16f207e7fb20a3b823be218c26c789f03","email":"two@ca.ca"},"new":{"password":"df86714fc534e90b5ffa0726164516b16f207e7fb20a3b823be218c26c789f03","email":"two@ca.ca"},"newasd":{"password":"df86714fc534e90b5ffa0726164516b16f207e7fb20a3b823be218c26c789f03","email":"two@ca.ca"},"newa":{"password":"df86714fc534e90b5ffa0726164516b16f207e7fb20a3b823be218c26c789f03","email":"two@ca.ca"},"asdds":{"password":"5fd924625f6ab16a19cc9807c7c506ae1813490e4ba675f843d5a10e0baacdb8","email":"asd@c.a"}}

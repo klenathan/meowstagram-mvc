@@ -27,6 +27,13 @@ header a {
     color: white;
 }
 
+.user-info-wrap {
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 #home-logo {
     flex: 2
 }

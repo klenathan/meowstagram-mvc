@@ -25,25 +25,25 @@ function checkPassword (passwordInput) {
     } else {
         lowercasePass.style.backgroundColor = redColor
     }
-    // Check & feedback for lowercase   
+    // Check & feedback for uppercase   
     if (uppercaseCheck.test(passwordInput)){
         uppercasePassed.style.backgroundColor = greenColor
     } else {
         uppercasePassed.style.backgroundColor = redColor
     }
-    // Check & feedback for lowercase   
+    // Check & feedback for number   
     if (numberCheck.test(passwordInput)){
         numberPassed.style.backgroundColor = greenColor
     } else {
         numberPassed.style.backgroundColor = redColor
     }
-    // Check & feedback for lowercase   
+    // Check & feedback for special characters   
     if (specialCharCheck.test(passwordInput)){
         specialCharPassed.style.backgroundColor = greenColor
     } else {
         specialCharPassed.style.backgroundColor = redColor
     }
-    // Check & feedback for lowercase   
+    // Check & feedback for length check   
     if (lengthCheck.test(passwordInput)){
         lengthPassed.style.backgroundColor = greenColor
     } else {

@@ -9,12 +9,14 @@
 </head>
 <body>
     <div class="signup-poster">
-    left
+    
     </div>
 
     <div class="signup-form-wrapper">
-        <h1>SIGN UP</h1>
+        
         <form action="signup/handleSignup" name="login" method="post">
+            
+            <h1>SIGN UP</h1> 
 
             <input class="input-field"  type="text" name="signupUsername" 
             id="signupUsername" placeholder="Username"
@@ -32,9 +34,17 @@
             type="password" 
             name="signupPassword" 
             id="signupPassword" 
-            pattern="(?=.*[a-z])+(?=.*[A-Z])+(?=.*[0-9])+(?=.*[^A-Za-z0-9])+(?=.{8,})"
+            pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}"
             required>
-            
+
+            <input 
+            class="input-field" placeholder="Confirm Password" 
+            type="password" 
+            name="confirmPassword" 
+            id="confirmPassword"
+            required>
+            <!-- (?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,}) -->
+            <!-- pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})" -->
             <div class="password-check-wrap">
                 <h2 class="password-check" id="lowercasePassed">Lowercase character</h2>
                 <h2 class="password-check" id="uppercasePassed">Uppercase character</h2>
@@ -49,10 +59,10 @@
             id="signupBtn" value="Sign Up">
 
 
-            <p>
+            <p id="respond-message">
                 <?php
-                echo isset($_SESSION["signup_err_name"]) ? $_SESSION["signup_err_name"]: ""; 
-                unset($_SESSION["signup_err_name"]);
+                echo isset($_SESSION["signup_err"]) ? $_SESSION["signup_err"]: ""; 
+                unset($_SESSION["signup_err"]);
                 ?>
             </p>
         </form> 

@@ -9,24 +9,36 @@
 </head>
 <body>
     <div class="login-poster">
-    left
+    
     </div>
 
     <div class="login-form-wrapper">
         <form action="login/handleLogin" name="login" method="post">
+            <h1>Login</h1>
             <input type="text" name="username" 
-            id="username" placeholder="username"
+            id="username" placeholder="Username"
+            class="input-field"
             value="<?php
             echo isset($_SESSION["loginUsername"]) ? $_SESSION["loginUsername"]: "";
             unset($_SESSION["loginUsername"]);
-            ?>">
+            ?>"
+            required>
             
-            <input type="password" name="password" 
-            id="password" placeholder="password">
+            <input
+            class="input-field" type="password" name="password" 
+            id="password" placeholder="Password"
+            required>
 
-            <input type="submit" name="loginBtn" 
-            id="loginBtn" value="Login">
-            <p>
+            <div class="login-signup-wrap">
+                <input 
+                type="submit" name="loginBtn" 
+                id="loginBtn" value="Login" class="form-btn">
+                <a href="/signup">
+                    <p class="signup-link">Don't have an account? Sign up now!</p>
+                </a>
+            </div>
+            
+            <p id="respond-message">
                 <?php
                 echo isset($_SESSION["err_name"]) ? $_SESSION["err_name"]: "";
                 // echo $_SESSION["loginUsername"];

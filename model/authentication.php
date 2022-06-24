@@ -28,6 +28,7 @@ class Auth {
             "password"=>$inputPasswordhHash,
             "email"=>$inputEmail);
             
+            Auth::uploadAvt($inputUsername);
             DataHandle::writeData(Auth::$userDataFile, json_encode($userData));
             return "successful";
         } else {
@@ -38,6 +39,31 @@ class Auth {
     private static function checkUserExist($username){
         $userData = DataHandle::readToJson(Auth::$userDataFile);
         return array_key_exists($username, $userData) ? True : False;
+    }
+
+    private static function uploadAvt($username){
+
+        $target_dir = "data/userAvatar/";
+        $target_file = $target_dir . $username . ".jpg";
+        $imageFile = "data/userAvatar/";
+        $check = False;
+
+        if (!isset($_FILES["avtImg"]["name"])){
+            $check = False;
+        } else {
+            $check = True;
+        }
+
+        if($check !== false) {
+            echo (isset($_FILES["avtImg"]["tmp_name"]));
+            echo "file is an image";
+            $imageFile = $_FILES["avtImg"]["tmp_name"];
+            move_uploaded_file($imageFile, $target_file);
+        } else {
+            $imageFile = "data/userAvatar/default.jpg";
+            echo "File is not an image.";
+            copy($imageFile, $target_file);
+        }
     }
 }
 ?>
