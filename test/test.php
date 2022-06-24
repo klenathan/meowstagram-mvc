@@ -14,5 +14,6 @@
     // }
 
     setcookie('user', '', -1, '/'); 
+    // test
 
 ?>
