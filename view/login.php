@@ -18,11 +18,21 @@
             id="username" placeholder="username"
             value="<?php
             echo isset($_SESSION["loginUsername"]) ? $_SESSION["loginUsername"]: "";
+            unset($_SESSION["loginUsername"]);
             ?>">
+            
             <input type="password" name="password" 
             id="password" placeholder="password">
+
             <input type="submit" name="loginBtn" 
             id="loginBtn" value="Login">
+            <p>
+                <?php
+                echo isset($_SESSION["err_name"]) ? $_SESSION["err_name"]: "";
+                // echo $_SESSION["loginUsername"];
+                unset($_SESSION["err_name"]);
+                ?>
+            </p>
         </form> 
     </div>
 </body>

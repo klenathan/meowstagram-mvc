@@ -11,7 +11,7 @@
             unset($url_array[0]);
             
             ################
-            if(in_array($url_array[1], $reservedUrl)){
+            if(in_array(strtolower($url_array[1]), $reservedUrl)){
                 if(file_exists("controller/" . $url_array[1] . ".php")){
                     // include_once("controller/" . $url_array[1] . ".php");
                     $this->controller = $url_array[1];

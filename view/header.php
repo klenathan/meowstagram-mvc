@@ -7,13 +7,18 @@
             <input type="text" name="search" id="search">
         </li>
         <li>
-            <a href="/<?php echo $username?>">My account</a>
+            <?php
+            $username = isset($_COOKIE["user"]) ? $_COOKIE["user"] : "Login"
+            ?>
+            <a href="/<?php echo $username?>"><?php
+            echo $username;
+            ?></a>
         </li>
         <?php
         if(isset($_COOKIE["user"])){
             echo '
             <li>
-                <a href="/'.$_COOKIE["user"].'">menu?</a>
+                <a href="/login/signOut">Sign out</a>
             </li>';
         } else {
             echo '
