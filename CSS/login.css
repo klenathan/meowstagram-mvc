@@ -1,0 +1,12 @@
+body {
+    display: flex;
+    flex-direction: row;
+}
+
+.login-poster {
+    flex: 1;
+}
+
+.login-form-wrapper {
+    flex: 1
+}
