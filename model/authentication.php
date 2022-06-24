@@ -65,5 +65,11 @@ class Auth {
             copy($imageFile, $target_file);
         }
     }
+
+    public static function renewCookie(){
+        if (isset($_COOKIE["user"])){
+            setcookie("user", $_COOKIE["user"], time() + (3600*24*30), "/");
+        } 
+    }
 }
 ?>

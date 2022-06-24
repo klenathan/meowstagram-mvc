@@ -1,3 +1,7 @@
+<?php 
+    $lightmode = isset($_COOKIE["darkmode"])? $_COOKIE["darkmode"] : "lightmode"
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="CSS/login.css">
+    <link rel="stylesheet" href="CSS/<?php echo $lightmode?>/login.css">
 </head>
 <body>
     <div class="login-poster">
@@ -41,7 +45,6 @@
             <p id="respond-message">
                 <?php
                 echo isset($_SESSION["err_name"]) ? $_SESSION["err_name"]: "";
-                // echo $_SESSION["loginUsername"];
                 unset($_SESSION["err_name"]);
                 ?>
             </p>

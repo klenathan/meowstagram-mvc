@@ -1,0 +1,111 @@
+*{
+    --compoenent-width: 60%;
+    --background-dark: rgb(23, 24, 31);
+    --text-color: white;
+    --dark--linear: linear-gradient(90deg, rgb(35, 0, 88) 0%, rgb(0, 75, 115) 100%);
+    color: var(--text-color);
+    margin: 0
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+}
+
+.login-poster {
+    flex: 1;
+    background: var(--dark--linear)
+}
+
+.login-form-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--background-dark);
+}
+
+.login-form-wrapper form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: var(--compoenent-width);
+    max-width: 500px;
+    height: 400px;
+    /* box-shadow: 0px 0px 2rem 2px rgba(183, 0, 255, 0.9); */
+    border: 2px rgb(183, 0, 255) solid;
+    border-radius: 0.5rem;
+}
+
+.login-form-wrapper h1 {
+    color: var(--text-color)
+}
+
+.input-field {
+    width: 80%;
+    font-size: 1.1rem;
+    max-width: 500px;
+    padding: 0.5rem;
+    outline: none;
+    border: 2px rgb(183, 0, 255) solid;
+    border-radius: 0.5rem;
+    background: var(--background-dark)
+}
+
+.input-field::placeholder{
+    color: rgb(176, 176, 176)
+}
+
+#respond-message {
+    position: absolute;
+    color: red;
+    transform: translateY(250px);
+}
+
+.login-signup-wrap {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 150px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.login-signup-wrap a {
+    text-decoration: none;
+}
+
+.signup-link {
+    color: rgba(136,54,255,1)
+}
+
+.signup-link:hover {
+    color: rgb(102, 0, 255)
+}
+
+
+.form-btn {
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: linear-gradient(90deg, rgba(136,54,255,1) 0%, rgba(54,186,255,1) 100%); */
+    background: linear-gradient(90deg, rgb(42, 144, 212) 0%, rgb(102, 59, 228) 100%);;
+    outline: none;
+    padding: 1rem 0rem;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    border: none
+}
+
+
+.form-btn:hover {
+    box-shadow: 0 0 20px 5px rgba(46, 84, 198, 0.5);
+}

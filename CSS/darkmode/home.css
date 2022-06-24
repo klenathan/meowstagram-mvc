@@ -1,0 +1,8 @@
+* {
+    --background-color: rgb(23, 24, 31);
+}
+
+main {
+    background: var(--background-color);
+    min-height: 95vh
+}

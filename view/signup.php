@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up</title>
-    <link rel="stylesheet" href="CSS/signup.css">
+    <link rel="stylesheet" href="CSS/lightmode/signup.css">
 </head>
 <body>
     <div class="signup-poster">
-    
+        <a href="/">Meowstagram</a>
     </div>
 
     <div class="signup-form-wrapper">
@@ -43,8 +43,7 @@
             name="confirmPassword" 
             id="confirmPassword"
             required>
-            <!-- (?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,}) -->
-            <!-- pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})" -->
+            
             <div class="password-check-wrap">
                 <h2 class="password-check" id="lowercasePassed">Lowercase character</h2>
                 <h2 class="password-check" id="uppercasePassed">Uppercase character</h2>

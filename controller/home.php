@@ -6,5 +6,10 @@
         function __construct () {
             $this->view("home");
         }
+
+        function displayPost(){
+            $post = new Post();
+            $post->renderPost();
+        }
     }
 ?>

@@ -14,6 +14,11 @@
     // }
 
     setcookie('user', '', -1, '/'); 
+    if (isset($_COOKIE["user"])){
+        echo $_COOKIE["user"];
+    } else {
+        echo "none";
+    }
     // test
 
 ?>

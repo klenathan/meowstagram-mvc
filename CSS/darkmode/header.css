@@ -1,0 +1,57 @@
+* {
+    --background-color-dark: linear-gradient(90deg, rgb(72, 39, 133)0%, rgb(84, 104, 137)100%);
+
+}
+
+header {
+    width: 100%;
+    background: var(--background-color-dark);
+    height: 5vh;
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    text-decoration: none;
+    height: 100%;
+}
+
+header li {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+header a {
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.user-info-wrap {
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#home-logo {
+    flex: 2
+}
+
+#search-wrap {
+    flex: 3
+}
+
+#search {
+    width: 70%;
+    height: 2rem;
+    outline: none;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem
+}
