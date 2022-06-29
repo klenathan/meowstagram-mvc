@@ -19,36 +19,36 @@ let redColor = "coral";
 
 function checkPassword (passwordInput) {
     if (passwordInput){
-    // Check & feedback for lowercase
-    if (lowercaseCheck.test(passwordInput)){
-        lowercasePass.style.backgroundColor = greenColor
-    } else {
-        lowercasePass.style.backgroundColor = redColor
-    }
-    // Check & feedback for uppercase   
-    if (uppercaseCheck.test(passwordInput)){
-        uppercasePassed.style.backgroundColor = greenColor
-    } else {
-        uppercasePassed.style.backgroundColor = redColor
-    }
-    // Check & feedback for number   
-    if (numberCheck.test(passwordInput)){
-        numberPassed.style.backgroundColor = greenColor
-    } else {
-        numberPassed.style.backgroundColor = redColor
-    }
-    // Check & feedback for special characters   
-    if (specialCharCheck.test(passwordInput)){
-        specialCharPassed.style.backgroundColor = greenColor
-    } else {
-        specialCharPassed.style.backgroundColor = redColor
-    }
-    // Check & feedback for length check   
-    if (lengthCheck.test(passwordInput)){
-        lengthPassed.style.backgroundColor = greenColor
-    } else {
-        lengthPassed.style.backgroundColor = redColor
-    }
+        // Check & feedback for lowercase
+        if (lowercaseCheck.test(passwordInput)){
+            lowercasePass.style.backgroundColor = greenColor
+        } else {
+            lowercasePass.style.backgroundColor = redColor
+        }
+        // Check & feedback for uppercase   
+        if (uppercaseCheck.test(passwordInput)){
+            uppercasePassed.style.backgroundColor = greenColor
+        } else {
+            uppercasePassed.style.backgroundColor = redColor
+        }
+        // Check & feedback for number   
+        if (numberCheck.test(passwordInput)){
+            numberPassed.style.backgroundColor = greenColor
+        } else {
+            numberPassed.style.backgroundColor = redColor
+        }
+        // Check & feedback for special characters   
+        if (specialCharCheck.test(passwordInput)){
+            specialCharPassed.style.backgroundColor = greenColor
+        } else {
+            specialCharPassed.style.backgroundColor = redColor
+        }
+        // Check & feedback for length check   
+        if (lengthCheck.test(passwordInput)){
+            lengthPassed.style.backgroundColor = greenColor
+        } else {
+            lengthPassed.style.backgroundColor = redColor
+        }
     } else {
         lowercasePass.style.backgroundColor = "transparent"
         uppercasePassed.style.backgroundColor = "transparent"

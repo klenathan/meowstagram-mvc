@@ -1,4 +1,7 @@
 <?php 
+    if (!isset($_COOKIE["darkmode"])){
+        $_COOKIE["darkmode"] = "darkmode";
+    }
     $lightmode = isset($_COOKIE["darkmode"])? $_COOKIE["darkmode"] : "lightmode"
 ?>
 
@@ -14,11 +17,9 @@
     include("model/authentication.php");
     
 
-    include("controller/routing.php");
+    include("core/routing.php");
     #null for default page
     $reservedUrl = array("home", "login", "signup", "user", "admin", "post", null); 
     $route = new Route($reservedUrl, "home");
-    
-    // Auth::renewCookie();
 ?>
 

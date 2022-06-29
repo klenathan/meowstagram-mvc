@@ -9,7 +9,11 @@
         </li>
         <li>
             <a href="." onClick='toggleLightMode()'>
-                Toggle color mode: <?php echo $_COOKIE["darkmode"]?>
+                Toggle color mode: <?php
+                if (isset($_COOKIE["darkmode"])) {
+                    echo $_COOKIE["darkmode"];
+                }
+                ?>
             </a>
         </li>
         <li class="user-info-wrap">

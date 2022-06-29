@@ -22,8 +22,6 @@ class Login extends Controller {
             $_SESSION["err_name"] = "unknown error, please contact @klenathan for more information";
             header("location: /login");
         }
-
-        
     }
     function signOut(){
         setcookie("user", null, -1, "/");

@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="CSS/<?php echo $lightmode?>/home.css">
+    <link rel="stylesheet" href="CSS/<?php echo $lightmode?>/style.css">
 </head>
 <body>
 
@@ -20,18 +21,22 @@
     </header>
 
     <main>
-        <h1>Hello</h1>
-
-        <p><?php 
-        echo $_COOKIE["darkmode"];
-        echo $_COOKIE["user"];
+        <div class="upload-post-wrap">
+            <div class="upload-form-wrap">
+                <form action="post/uploadpost" method="post">
+                    <div class="upload-post-detail">
+                        <input type="text" name="postContent" id="postContent">
+                        <input type="file" name="postFile" id="postFile">
+                    </div>
+                    <input type="submit" value="Post" id="uploadPostBtn">
+                </form>
+            </div>
+            <img src="" alt="post image">
+        </div>
         
-        ?></p>
-        
-        <div>
+        <div class="main-feed">
             <?php 
-            $post = new Post();
-            $post->renderPost();?>
+            Home::displayFeed();?>
         </div>
     </main>
 </body>
