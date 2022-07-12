@@ -1,10 +1,17 @@
 {
+  
   "62b94bb65e084": {
-    "author": null,
-    "status": null,
+    "author": "author",
+    "status": "Hello world",
     "imgPath": "data/postImage/62b94bb65e084.jpg",
     "visible": "Public",
     "time": 1656310710
   },
-  "post1": "asd"
+  "62b94bb65e081": {
+    "author": "one",
+    "status": "Hello world2",
+    "imgPath": "data/postImage/62b94bb65e084.jpg",
+    "visible": "Public",
+    "time": 1656310710
+  }
 }

@@ -23,6 +23,10 @@ main {
     flex-direction: row;
 }
 
+.main-feed {
+    width: 40%;
+}
+
 #uploadPostBtn {
     background: var(--purple-color);
 }

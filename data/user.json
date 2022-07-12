@@ -1,7 +1,12 @@
 {
   "one": {
     "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
-    "age": 15
+    "age": 15,
+    "email": "one@c.a"
+  },
+  "author": {
+    "password": "5fd924625f6ab16a19cc9807c7c506ae1813490e4ba675f843d5a10e0baacdb8",
+    "email": "asd@c.a"
   },
   "qweqwe": {
     "email": "two@ma.ca",

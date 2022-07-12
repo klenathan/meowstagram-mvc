@@ -3,8 +3,13 @@
     padding: 0;
     font-family: sans-serif;
     color: white;
+    
     --background-color: rgb(23, 24, 31);
     --purple-color: rgb(183, 0, 255)
+}
+
+html {
+    background-color: var(--background-color);
 }
 
 input {

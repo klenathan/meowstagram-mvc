@@ -15,6 +15,7 @@
     include("controller/header.php");
     include("controller/post.php");
     include("model/authentication.php");
+    include("model/user.php");
     
 
     include("core/routing.php");

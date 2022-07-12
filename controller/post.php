@@ -6,7 +6,36 @@ class Post extends Controller {
     function renderPost(){
         $postData = DataHandle::readToJson($this->postDataFile);
         foreach ($postData as $key => $value) {
-            echo $key." ". $value;
+
+            $postImgPath = $value["imgPath"];
+            $userAvatar = "data/userAvatar/".$value["author"].".jpg";
+            $author = $value["author"];
+            $status = $value["status"];
+            $postVis = $value["visible"];
+            echo 
+            '<div class="post">
+                <div class="post-detail-wrapper">
+                    <img src="'.$userAvatar.'"
+                    class="post-avatar" 
+                    alt="avatar">
+            
+                    <a class="post-username" href="'.$author.'">
+                        <p>'.$author.'</p>
+                    </a>
+            
+                    <p class="post-visibility">'.$postVis.'</p>
+                </div>
+            
+                <div class="status">
+                    <p>'.$status.'</p>
+                </div>
+            
+                <div class="img-wrapper">
+                    <img src="'.$postImgPath.'" 
+                    class="post-img"
+                    alt="">
+                </div>
+            </div>';
         }
     }
 
