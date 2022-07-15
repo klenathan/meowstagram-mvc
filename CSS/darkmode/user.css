@@ -15,7 +15,6 @@ main{
     flex-direction: row;
     align-items: center;
     width: var(--content-width);
-    /* background-color: var(--content-background); */
     padding: 1rem 0;
     height: 200px;
 }
@@ -32,6 +31,7 @@ main{
 .user-avatar {
     width: 150px;
     object-fit: cover;
+    border-radius: 75px;
 }
 
 .detail-user-info {
@@ -70,4 +70,5 @@ main{
 
 .post-img {
     width: 80%;
+    aspect-ratio: 1;
 }

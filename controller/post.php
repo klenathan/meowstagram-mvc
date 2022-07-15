@@ -7,35 +7,37 @@ class Post extends Controller {
         $postData = DataHandle::readToJson($this->postDataFile);
         foreach ($postData as $key => $value) {
 
-            $postImgPath = $value["imgPath"];
-            $userAvatar = "data/userAvatar/".$value["author"].".jpg";
-            $author = $value["author"];
-            $status = $value["status"];
-            $postVis = $value["visible"];
-            echo 
-            '<div class="post">
-                <div class="post-detail-wrapper">
-                    <img src="'.$userAvatar.'"
-                    class="post-avatar" 
-                    alt="avatar">
-            
-                    <a class="post-username" href="'.$author.'">
-                        <p>'.$author.'</p>
-                    </a>
-            
-                    <p class="post-visibility">'.$postVis.'</p>
-                </div>
-            
-                <div class="status">
-                    <p>'.$status.'</p>
-                </div>
-            
-                <div class="img-wrapper">
-                    <img src="'.$postImgPath.'" 
-                    class="post-img"
-                    alt="">
-                </div>
-            </div>';
+            if ($postData[$key]["visible"] == "public") {
+                $postImgPath = $value["imgPath"];
+                $userAvatar = "data/userAvatar/".$value["author"].".jpg";
+                $author = $value["author"];
+                $status = $value["status"];
+                $postVis = $value["visible"];
+                echo 
+                '<div class="post">
+                    <div class="post-detail-wrapper">
+                        <img src="'.$userAvatar.'"
+                        class="post-avatar" 
+                        alt="avatar">
+                
+                        <a class="post-username" href="'.$author.'">
+                            <p>'.$author.'</p>
+                        </a>
+                
+                        <p class="post-visibility">'.$postVis.'</p>
+                    </div>
+                
+                    <div class="status">
+                        <p>'.$status.'</p>
+                    </div>
+                
+                    <div class="img-wrapper">
+                        <img src="'.$postImgPath.'" 
+                        class="post-img"
+                        alt="">
+                    </div>
+                </div>';
+            }
         }
     }
 
@@ -49,7 +51,7 @@ class Post extends Controller {
 
         $author = $_COOKIE["user"];
         $status = $_POST["status"];
-        $visible = "Public";
+        $visible = $_POST["visible"];;
 
         
         $newPost = array( $postId => array(
@@ -62,10 +64,12 @@ class Post extends Controller {
 
         $postJsonData = $newPost + $postJsonData;
 
-        $imageFile = $_FILES["postImg"]["tmp_name"];
+        $imageFile = $_FILES["postFile"]["tmp_name"];
 
         DataHandle::writeData("data/post.json", json_encode($postJsonData));
         move_uploaded_file($imageFile, $target_file);
+
+        header("Location: /");
     }
 }
 ?>

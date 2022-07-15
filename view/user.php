@@ -46,20 +46,11 @@
         </div>
 
         <div class="post-feed">
-            <div class="user-post">
-                <img src="data/postImage/62b94bb65e084.jpg" 
-                class="post-img" alt="62b94bb65e084">
-            </div>
+            
 
-            <div class="user-post">
-                <img src="data/postImage/62b94bb65e084.jpg" 
-                class="post-img" alt="62b94bb65e084">
-            </div>
-
-            <div class="user-post">
-                <img src="data/postImage/62b94bb65e084.jpg" 
-                class="post-img" alt="62b94bb65e084">
-            </div>
+            <?php
+            echo $userPosts;
+            ?>
             
         </div>
     </main>

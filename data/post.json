@@ -1,17 +1,30 @@
 {
-  
-  "62b94bb65e084": {
-    "author": "author",
-    "status": "Hello world",
-    "imgPath": "data/postImage/62b94bb65e084.jpg",
-    "visible": "Public",
-    "time": 1656310710
+  "62d11d9903d44": {
+    "author": "one",
+    "status": "test",
+    "imgPath": "data/postImage/62d11d9903d44.jpg",
+    "visible": "private",
+    "time": 1657871769
+  },
+  "62d10b85cc14e": {
+    "author": "one",
+    "status": "",
+    "imgPath": "data/postImage/62d10b85cc14e.jpg",
+    "visible": "public",
+    "time": 1657867141
   },
   "62b94bb65e081": {
     "author": "one",
     "status": "Hello world2",
     "imgPath": "data/postImage/62b94bb65e084.jpg",
-    "visible": "Public",
+    "visible": "public",
+    "time": 1656310710
+  },
+  "62b94bb65e0s1": {
+    "author": "one",
+    "status": "Hello world2",
+    "imgPath": "data/postImage/62b94bb65e084.jpg",
+    "visible": "public",
     "time": 1656310710
   }
 }
